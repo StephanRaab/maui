@@ -9,7 +9,7 @@ public partial class EditContactPage : ContentPage
 
     private void UpdateContactClicked(object sender, EventArgs e)
     {
-		// ".." pops off to previous route
+		// ".." navigate back to parent
 		Shell.Current.GoToAsync("..");
     }
 }

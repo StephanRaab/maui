@@ -9,6 +9,7 @@ public partial class AddContactPage : ContentPage
 
 	private void AddContactClicked(object sender, EventArgs e)
 	{
-		Shell.Current.GoToAsync("..");
+		// this is the other way to go back
+		Shell.Current.GoToAsync($"//{nameof(ContactsPage)}");
 	}
 }
