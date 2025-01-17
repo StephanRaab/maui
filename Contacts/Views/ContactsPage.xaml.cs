@@ -9,11 +9,11 @@ public partial class ContactsPage : ContentPage
 
     private void AddContactClicked(object sender, EventArgs e)
     {
-
+        Shell.Current.GoToAsync(nameof(AddContactPage));
     }
 
     private void EditContactClicked(object sender, EventArgs e)
     {
-
+        Shell.Current.GoToAsync(nameof(EditContactPage));
     }
 }
