@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Contacts.Views.EditContactPage"
              Title="Edit Contact">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="10" Margin="10">
         <Label 
             Text="EDIT CONTACT PAGE"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Button Text="Update Contact" Clicked="UpdateContactClicked"/>
     </VerticalStackLayout>
 </ContentPage>
