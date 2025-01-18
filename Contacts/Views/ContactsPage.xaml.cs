@@ -26,14 +26,18 @@ public partial class ContactsPage : ContentPage
 
     private void contactsList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        if (contactsList.SelectedItem != null)
-        {
-            Shell.Current.GoToAsync(nameof(EditContactPage));
-        }
+        Shell.Current.GoToAsync(nameof(EditContactPage));      
     }
 
     private void contactsList_ItemTapped(object sender, ItemTappedEventArgs e)
     {
+        // Remove the ItemSelected event handler temporarily
+        contactsList.ItemSelected -= contactsList_ItemSelected;
+
+        // Set the SelectedItem to null
         contactsList.SelectedItem = null;
+
+        // Reattach the ItemSelected event handler
+        contactsList.ItemSelected += contactsList_ItemSelected;
     }
 }
