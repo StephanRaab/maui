@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Contacts.Views.ContactsPage"
              Title="Contacts">
-    <ListView x:Name="contactsList" Background="Transparent" RowHeight="75">
+    <ListView x:Name="contactsList" ItemSelected="contactsList_ItemSelected" ItemTapped="contactsList_ItemTapped" Background="Transparent" RowHeight="75">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Name}" Detail="{Binding Email}"></TextCell>
