@@ -16,7 +16,7 @@ public partial class ContactsPage : ContentPage
 
     private void contactsList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(EditContactPage));      
+        Shell.Current.GoToAsync($"{nameof(EditContactPage)}/?Id={((Contact)contactsList.SelectedItem).ContactId}");      
     }
 
     private void contactsList_ItemTapped(object sender, ItemTappedEventArgs e)
