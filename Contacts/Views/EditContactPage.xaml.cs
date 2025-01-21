@@ -22,7 +22,7 @@ public partial class EditContactPage : ContentPage
 	{
 		set {
 			_contact = ContactRepository.GetContactById(int.Parse(value));
-			lblName.Text = _contact.Name;
+			//lblName.Text = _contact.Name;
 		}
 	}
 }
