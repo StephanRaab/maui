@@ -40,5 +40,8 @@
                 <Entry x:Name="entryAddress" VerticalOptions="Center"></Entry>
             </HorizontalStackLayout>
         </Frame>
+        
+        <Button BackgroundColor="LightSeaGreen" Clicked="cancelClicked" Text="Cancel"></Button>
+        <Button Clicked="UpdateContactClicked" Text="Update"></Button>
     </VerticalStackLayout>
 </ContentPage>
