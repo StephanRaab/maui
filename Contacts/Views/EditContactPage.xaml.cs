@@ -1,5 +1,5 @@
 using Contacts.Models;
-using Contact = Contacts.Models.Contact; //adding this due to otherwise ambigious naming of "Contact"
+using Contact = Contacts.Models.Contact; //adding this due to ambigious naming of "Contact"
 namespace Contacts.Views;
 
 [QueryProperty(nameof(ContactId), "Id")]
@@ -22,7 +22,10 @@ public partial class EditContactPage : ContentPage
 	{
 		set {
 			_contact = ContactRepository.GetContactById(int.Parse(value));
-			//lblName.Text = _contact.Name;
+			entryName.Text = _contact.Name;
+			entryEmail.Text = _contact.Email;
+			entryPhone.Text = _contact.Phone;
+			entryAddress.Text = _contact.Address;
 		}
 	}
 }
